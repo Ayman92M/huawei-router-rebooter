@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  router-rebooter:
+    build: .
+    container_name: router-rebooter
+    network_mode: "host"
+    restart: "no"
+    env_file:
+      - .env
