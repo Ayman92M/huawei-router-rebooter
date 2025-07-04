@@ -14,6 +14,17 @@ This lightweight Dockerized Python script checks for internet connectivity and a
 
 ---
 
+## 🛠 How It Works
+
+1. Script checks internet connectivity via `curl https://1.1.1.1`
+2. If it fails `MAX_RETRIES` times, it:
+   - Sends a reboot command to your Huawei router using the local API
+   - Waits 80 seconds for the router to reboot
+   - Sends a Discord message if a webhook URL is provided
+
+---
+
+
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
